@@ -1,0 +1,28 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender" target="System.out">
+        <encoder>
+            <pattern>%msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <!--<logger name="slick.jdbc.JdbcBackend.statement"  level="DEBUG" />-->
+
+    <logger name="scala.slick.session" level="ERROR">
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <!--<logger name="com.mchange.v2.c3p0" level="OFF">-->
+        <!--<appender-ref ref="STDOUT" />-->
+    <!--</logger>-->
+
+    <!--<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">-->
+    <!--<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender" target="System.out">-->
+        <!--<encoder>-->
+            <!--<pattern>*** \(%logger{30}\)%green(%X{debugId}) %msg%n</pattern>-->
+        <!--</encoder>-->
+    <!--</appender>-->
+    <!--<root level="${log.root:-info}">-->
+        <!--<appender-ref ref="STDOUT" />-->
+    <!--</root>-->
+
+</configuration>
